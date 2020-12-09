@@ -10,9 +10,9 @@
 /*记账类型*/
 .bookingBox{
   padding: 30rpx 0;
-  background: #eee;
+  background: rgb(253, 251, 251);
   border-radius: 60rpx;
-  height: 400rpx;
+  /* height: 400rpx; */
 }
 .bookingBox .bookingTitle{
   width: 300rpx;
@@ -31,4 +31,32 @@
 }
 .bookingBox .bookingTitle .active{
   background: #FFDC5A;
+}
+/*轮播图样式*/
+.bannerSwiper{
+  height: 400rpx;
+}
+.bannerIcon{
+  display: flex;
+  flex-wrap: wrap;
+}
+/*单个图标*/
+.iconItem{
+  width:25%;
+  margin-top: 30rpx;
+}
+.iconItem .iconImg{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+}
+.iconItem .iconImg image{
+  width: 100%;
+  height: 100%;
+}
+.iconItem .iconName{
+  text-align: center;
+  font-size: 28rpx;
+  color: #B3B3B3;
+  margin-top: 10rpx;
 }

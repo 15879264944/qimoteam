@@ -9,6 +9,45 @@
         <!-- <view class="bookingItem">支入</view> -->
       </view>
       <!-- 轮播图 -->
+      <view class="bookingBanner">
+        <swiper class="bannerSwiper"
+          indicator-dots="{{true}}"
+          indicator-color="rgba(0, 0, 0, .3)"
+          indicator-active-color="#FFDC5A"
+          wx:if="{{bookingTitle[0].isAct}}"
+           >
+          <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index">
+            <view class="bannerIcon" >
+              <!-- 单个图标 -->
+              <view class="iconItem" wx:for="{{8}}" wx:key="index">
+                <view class="iconImg">
+                  <image src="../../images/img/3.png"/>
+                </view>
+                <view class="iconName">餐饮</view>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+        <!-- 收入 -->
+        <swiper class="bannerSwiper"
+         indicator-dots="{{true}}" 
+         indicator-color="rgba(0, 0, 0, .3)" 
+         indicator-active-color="#FFDC5A"
+         wx:else
+         >
+          <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index">
+            <view class="bannerIcon" >
+              <!-- 单个图标 -->
+              <view class="iconItem" wx:for="{{8}}" wx:key="index">
+                <view class="iconImg">
+                  <image src="../../images/img/5.png"/>
+                </view>
+                <view class="iconName">餐饮</view>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
     </view>
     <!-- 账户选择 -->
     <!-- 用户填写信息 -->

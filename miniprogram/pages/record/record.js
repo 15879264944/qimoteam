@@ -28,7 +28,6 @@ Page({
     if(this.data.bookingTitle[index].isAct){
       return; //终止所有代码
     }
-
     //取消上一个激活的数据
     for(var i =0;i<this.data.bookingTitle.length;i++){
       if(this.data.bookingTitle[i].isAct){
