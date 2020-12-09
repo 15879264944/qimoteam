@@ -5,7 +5,12 @@
     <view class="bookingBox">
       <!-- 标题 -->
       <view class="bookingTitle">
-        <view class="bookingItem {{item.isAct ? 'active' : ''}}" wx:for="{{bookingTitle}}" wx:key="index" bindtap="titleTap" data-index="{{index}}">{{item.name}}</view>
+        <view class="bookingItem {{item.isAct ? 'active' : ''}}" 
+        wx:for="{{bookingTitle}}" 
+        wx:key="index" bindtap="titleTap" 
+        data-index="{{index}}"
+        data-type="bookingTitle"
+        >{{item.name}}</view>
         <!-- <view class="bookingItem">支入</view> -->
       </view>
       <!-- 轮播图 -->
@@ -14,6 +19,7 @@
           indicator-dots="{{true}}"
           indicator-color="rgba(0, 0, 0, .3)"
           indicator-active-color="#FFDC5A"
+          
           wx:if="{{bookingTitle[0].isAct}}"
            >
           <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index">
@@ -35,7 +41,7 @@
          indicator-active-color="#FFDC5A"
          wx:else
          >
-          <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index">
+          <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index" data-type="bookingTitle">
             <view class="bannerIcon" >
               <!-- 单个图标 -->
               <view class="iconItem" wx:for="{{8}}" wx:key="index">
@@ -57,6 +63,14 @@
         <view class="iconfont icon-qianbao">账户选择</view>
       </view>
       <!-- 下 选项 -->
+      <view class="accountItem">
+        <view class="{{item.isAct ? 'active' : ''}}" 
+        wx:for="{{accountData}}" wx:key="index"
+        bindtap="titleTap"
+        data-index="{{index}}"
+        data-type="accountData"
+        >{{item.name}}</view>
+      </view>
     </view>
     <!-- 用户填写信息 -->
     <!-- 按钮 -->

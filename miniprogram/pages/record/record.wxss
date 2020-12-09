@@ -76,3 +76,21 @@
 .accountBox .accountTitle text{
   font-size: 40rpx;
 }
+.accountBox .accountItem{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.accountBox .accountItem view{
+  font-size: 24rpx;
+  background-color: #EDECEC;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 12rpx;
+  border-radius: 20rpx;
+  color: #B4B4B4;
+}
+.accountBox .accountItem .active{
+  background-color: #FFDC5A;
+  color: #fff;
+}
