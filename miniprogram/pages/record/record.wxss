@@ -60,3 +60,19 @@
   color: #B3B3B3;
   margin-top: 10rpx;
 }
+/*账户选择*/
+.accountBox{
+  background: rgb(253, 251, 251);
+  padding: 0 20rpx 30rpx;
+  margin-top: 40px;
+  border-radius: 30epx;
+}
+.accountBox .accountTitle{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ECECEC;
+  font-weight: bold;
+}
+.accountBox .accountTitle text{
+  font-size: 40rpx;
+}

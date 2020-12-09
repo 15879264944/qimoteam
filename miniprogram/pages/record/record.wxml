@@ -50,6 +50,14 @@
       </view>
     </view>
     <!-- 账户选择 -->
+    <!-- <view class="iconfont icon-qianbao"></view> -->
+    <view class="accountBox">
+      <!-- 上 标题 -->
+      <view class="accountTitle">
+        <view class="iconfont icon-qianbao">账户选择</view>
+      </view>
+      <!-- 下 选项 -->
+    </view>
     <!-- 用户填写信息 -->
     <!-- 按钮 -->
   </view>
