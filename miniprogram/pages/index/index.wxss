@@ -1,153 +1,124 @@
-/**index.wxss**/
-
-page {
-  background: #f6f6f6;
+/* miniprogram/pages/index/index.wxss */
+.header{
+  background-color: #fe0;
+  padding: 40rpx;
+  position: sticky;
+  top: 0; 
+  height: 240rpx;
+}
+.header .headerTop .topTitle{
+  font-size: 28rpx;
+  color: #AA870A;
+}
+.header .headerTop .topMoney{
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+.header .headerTop .topMoney text{
+  font-size: 40rpx；
+}
+.headerBtm{
+  overflow: hidden; /* 清除子元素对父元素的浮动影响*/
+  margin-top: 20rpx;
+   position: relative;
+}
+.headerItem{
+  width: 50%;
+  text-align: center;
+  float: left;
+ 
+}
+.headerBtm .headerItem .btmTitle{
+  font-size: 28rpx;
+  color: #AA870A;
+}
+.headerBtm .headerItem .btmMoney{
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+.headerBtm .line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /*以上固定搭配，居中*/
+  width: 1px;
+  height: 50%;
+  background: #AA870A;
+}
+.content{
+  padding:0 20rpx 40rpx;  
+}
+.dateBox{
+  position: sticky;
+  top: 320rpx;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
-}
-
-.userinfo {
-  padding-left: 120rpx;
-}
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
-}
-
-.userinfo-avatar[size] {
-  width: 100rpx;
-}
-
-
-.userinfo-avatar:after {
-  border: none;
-}
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
-  text-align: left;
-  padding-left: 0;
-  margin-left: 10px;
-}
-
-.userinfo-nickname::after {
-  border: none;
-}
-
-.userinfo-nickname-wrapper {
-  flex: 1;
-}
-
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
-}
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
-}
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height:80rpx;
+  line-height: 80rpx;
+  background: #fff;
 }
-
-.tunnel-text:first-child {
-  border-top: none;
+.dateBox .dateInfo text{
+  font-size: 28rpx;
+  color: #9B9B9B;
+  margin-right: 8rpx;
 }
-
-.tunnel-switch {
-  position: absolute;
-  right: 20rpx;
-  top: -2rpx;
-}
-
-.disable {
-  color: #888;
-}
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+.moreBox{
   display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
+  height: 80rpx;
+  align-items: center;
+}
+.moreBox .yuan{
+  width: 8rpx;
+  height: 8rpx;
+  background: #9B9B9B;
+  margin: 0 6rpx;
+  border-radius: 50%;
 }
 
-.service-button {
-  position: absolute;
-  top: 40rpx;
+/*列表样式*/
+.bookingItem{
+  display: flex;
+  align-items: center;
 }
-
-.service:active {
-  box-shadow: none;
+.bookingItem .iconImg{
+  width:80rpx;
+  height: 80rpx;
 }
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
+.bookingItem .iconImg image{
+  width: 100%;
+  height: 100%
+}
+.bookingItem .infoBox{
+  width: calc(100% - 100rpx);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #EDEDED;
+  height: 100rpx;
+}
+.bookingItem .infoBox .infoTitle{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.bookingItem .infoBox .infoComment{
+  font-size: 28rpx;
+  color: #9B9B9B;
+  margin-top: 10rpx;
+}
+.bookingItem .infoBox .infoMoney{
+  font-weight: bold;
+  line-height: 100rpx;
+  font-size: 36rpx;
+}
+/*收入类*/
+.icome{
+  color: #D78485
+}
+/*支出类*/
+.pay{
+  color: #339677
 }

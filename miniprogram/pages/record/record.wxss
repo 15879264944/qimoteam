@@ -1,0 +1,34 @@
+/* miniprogram/pages/record/record.wxss */
+.header{
+  background: #FFDC5A;
+  height: 160rpx;
+}
+.content{
+  margin-top: -100rpx;
+  padding: 0 40rpx;
+}
+/*记账类型*/
+.bookingBox{
+  padding: 30rpx 0;
+  background: #eee;
+  border-radius: 60rpx;
+  height: 400rpx;
+}
+.bookingBox .bookingTitle{
+  width: 300rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  border-radius: 40rpx;
+  overflow: hidden;
+  display: flex;
+  border: 1px solid #FFDC5A;
+}
+.bookingBox .bookingTitle .bookingItem{
+  width: 50%;
+  text-align: center;
+  line-height: 80rpx;
+ 
+}
+.bookingBox .bookingTitle .active{
+  background: #FFDC5A;
+}

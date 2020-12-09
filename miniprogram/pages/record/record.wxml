@@ -1,0 +1,17 @@
+<view class="record">
+  <view class="header"></view>
+  <view class="content">
+    <!-- 记账类型 -->
+    <view class="bookingBox">
+      <!-- 标题 -->
+      <view class="bookingTitle">
+        <view class="bookingItem {{item.isAct ? 'active' : ''}}" wx:for="{{bookingTitle}}" wx:key="index" bindtap="titleTap" data-index="{{index}}">{{item.name}}</view>
+        <!-- <view class="bookingItem">支入</view> -->
+      </view>
+      <!-- 轮播图 -->
+    </view>
+    <!-- 账户选择 -->
+    <!-- 用户填写信息 -->
+    <!-- 按钮 -->
+  </view>
+</view>
