@@ -19,17 +19,16 @@
           indicator-dots="{{true}}"
           indicator-color="rgba(0, 0, 0, .3)"
           indicator-active-color="#FFDC5A"
-          
           wx:if="{{bookingTitle[0].isAct}}"
            >
-          <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index">
+          <swiper-item class="bannerItem" wx:for="{{bannerType.pay}}" wx:key="index">
             <view class="bannerIcon" >
               <!-- 单个图标 -->
-              <view class="iconItem" wx:for="{{8}}" wx:key="index">
+              <view class="iconItem" wx:for="{{item}}" wx:for-item="data" wx:key="index">
                 <view class="iconImg">
-                  <image src="../../images/img/3.png"/>
+                  <image src="{{data.imgUrl}}"/>
                 </view>
-                <view class="iconName">餐饮</view>
+                <view class="iconName">{{data.Title}}</view>
               </view>
             </view>
           </swiper-item>
@@ -41,14 +40,14 @@
          indicator-active-color="#FFDC5A"
          wx:else
          >
-          <swiper-item class="bannerItem" wx:for="{{3}}" wx:key="index" data-type="bookingTitle">
+          <swiper-item class="bannerItem" wx:for="{{bannerType.income}}" wx:key="index" data-type="bookingTitle">
             <view class="bannerIcon" >
               <!-- 单个图标 -->
-              <view class="iconItem" wx:for="{{8}}" wx:key="index">
+              <view class="iconItem" wx:for="{{item}}" wx:for-item="data" wx:key="index">
                 <view class="iconImg">
-                  <image src="../../images/img/5.png"/>
+                  <image src="{{data.imgUrl}}"/>
                 </view>
-                <view class="iconName">餐饮</view>
+                <view class="iconName">{{data.Title}}</view>
               </view>
             </view>
           </swiper-item>
@@ -73,6 +72,30 @@
       </view>
     </view>
     <!-- 用户填写信息 -->
+    <view class="infoBox">
+      <!-- 日期 -->
+      <picker mode="date">
+        <view class="infoItem">
+          <view class="infoTitle">日期</view>
+          <view class="infoDate">2020-12-12</view>
+        </view>
+      </picker>
+      <!-- 金额 -->
+      <view class="infoItem">
+        <view class="infoTitle">金额</view>
+        <view class="infoInp">
+          <input type="digit" placeholder="请输入记账金额"/>
+        </view>
+      </view>
+      <!-- 备注 -->
+      <view class="infoItem">
+        <view class="infoTitle">备注</view>
+        <view class="infoInp">
+          <input type="text" placeholder="请输入备注信息"/>
+        </view>
+      </view>
+    </view>
     <!-- 按钮 -->
+    <view class="saveBtn">保存</view>
   </view>
 </view>

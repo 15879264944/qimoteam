@@ -61,11 +61,11 @@
   margin-top: 10rpx;
 }
 /*账户选择*/
-.accountBox{
+.accountBox,.infoBox{
   background: rgb(253, 251, 251);
   padding: 0 20rpx 30rpx;
-  margin-top: 40px;
-  border-radius: 30epx;
+  margin-top: 40rpx;
+  border-radius: 30rpx;
 }
 .accountBox .accountTitle{
   height: 80rpx;
@@ -93,4 +93,28 @@
 .accountBox .accountItem .active{
   background-color: #FFDC5A;
   color: #fff;
+}
+/* 用户信息 */
+.infoItem{
+  display: flex;
+  padding-top: 30rpx;
+}
+.infoItem .infoTitle{
+  width: 80rpx;
+  font-weight: bold;
+}
+.infoItem .infoInp{
+  width: calc(100%-80rpx);
+}
+.infoItem .infoInp input{
+  width: 100%;
+}
+.saveBtn{
+  width: 70%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #FFDC5A;
+  margin: 60rpx auto;
+  border-radius: 20rpx;
 }

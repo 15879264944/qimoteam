@@ -48,9 +48,21 @@ Page({
         type:"信用卡",
         isAct:false
       },
-    ]
+    ],
+    //轮播图标数据
+    bannerType:{
+      pay:[],
+      income:[]
+    },
   },
 
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    //获取图标数据
+    this.getBookingType();
+  },
   titleTap(e){
     console.log(e)
     //获取当前点击的数据对应的下标
@@ -74,7 +86,55 @@ Page({
     
     //数据响应重新设置
     this.setData({[type]:this.data[type]})
-  }
+  },
 
+  //获取图标数据
+  getBookingType(){
+    //调用云函数
+    wx.cloud.callFunction({
+      name:"get_booking_type",
+      success:res => {
+        //console.log("成功==>",res)
+        //获取返回的数据
+        var data = res.result.data;
+        // console.log(data)
+
+        //将数据分类，根据收入还是支出
+        var banner = {
+          pay:[],
+          income:[]
+        }
+        data.forEach(v =>{
+          // if(v.type == "pay"){
+          //   banner.pay.push(v)
+          // }else{
+          //   banner.income.push(v)
+          // }
+          banner[v.type].push(v)
+        })
+        // console.log(banner)
+
+        for(var k in banner){
+          //k:对象的键名
+          console.log(banner[k])
+          //开始截取下变标
+          var beginIndex = 0;
+          //while(){} 条件循环语句
+          while(beginIndex < banner[k].length){
+            //数据截取，返回一个新的数组
+            var newArr = banner[k].slice(beginIndex,beginIndex+8)
+            this.data.bannerType[k].push(newArr)
+            beginIndex+=8;
+          }
+        }
+        this.setData({
+          bannerType:this.data.bannerType
+        })
+      },
+      fail:err => {
+        console.log("失败==>",err)
+      }
+    })
+  }
 
 })
