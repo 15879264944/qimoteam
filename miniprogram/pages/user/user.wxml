@@ -1,2 +1,66 @@
 <!--miniprogram/pages/user/user.wxml-->
-<text>我的</text>
+<view class="user">
+    <!-- 上 用户信息 -->
+    <view class="userInfo">
+        <!-- 上 头像 -->
+        <view class="userImg">
+            <image src="{{userInfo.avatarUrl}}"  wx:if="{{isAuth}}" />
+            <image src="../../images/none.png"  wx:else/>
+            <!-- <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像</button> -->
+        </view>
+        <!-- 下 昵称 -->
+        <view class="userName"  wx:if="{{isAuth}}">{{userInfo.nickName}}</view>
+        <button wx:else size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登入</button>
+    </view>
+    <!-- 下 功能列表 -->
+    <view class="list">
+        <view class="item">
+            <view class="itemtitle">
+                <text class="iconfont icon-fenlei icon-1"></text>
+                分类
+            </view>
+            <!-- 右 -->
+            <view class="iconfont icon-xiangyou"></view>
+        </view>
+        <view class="item">
+            <view class="itemtitle">
+                <text class="iconfont icon-qianbao1 icon-2"></text>
+                账户
+            </view>
+            <!-- 右 -->
+            <view class="iconfont icon-xiangyou"></view>
+        </view>
+        <view class="item">
+            <view class="itemtitle">
+                <text class="iconfont icon-shengban-shengji icon-3"></text>
+                升级APP
+            </view>
+            <!-- 右 -->
+            <view class="iconfont icon-xiangyou"></view>
+        </view>
+        <view class="item">
+            <view class="itemtitle">
+                <text class="iconfont icon-iconyijianfankui icon-4"></text>
+                意见反馈
+            </view>
+            <!-- 右 -->
+            <view class="iconfont icon-xiangyou"></view>
+        </view>
+        <view class="item">
+            <view class="itemtitle">
+                <text class="iconfont icon-shezhi icon-1"></text>
+                设置
+            </view>
+            <!-- 右 -->
+            <view class="iconfont icon-xiangyou"></view>
+        </view>
+        <view class="item">
+            <view class="itemtitle">
+                <text class="iconfont icon-fenxiang icon-2"></text>
+                分享给好友
+            </view>
+            <!-- 右 -->
+            <view class="iconfont icon-xiangyou"></view>
+        </view>
+    </view>
+</view>

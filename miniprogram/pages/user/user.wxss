@@ -1,1 +1,48 @@
 /* miniprogram/pages/user/user.wxss */
+.userInfo{
+    padding: 40rpx 0;
+    background-color: #fe0;
+}
+.userImg{
+    width: 200rpx;
+    height:200rpx;
+    background-color: #FFF;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.userInfo button{
+    width: 30%;
+    height: 10%;
+    /* border-radius: 50%; */
+    background-color: #fe0;
+    /* text-align: center; */
+    display: block;
+    margin:  0 auto;
+    padding: 0;
+    /* line-height: 100rpx; */
+    margin-top: 30rpx;
+}
+.userImg image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.userName{
+    text-align: center;
+    font-weight: bold;
+    font-size: 36rpx;
+    margin-top: 30rpx;
+}
+.list{
+    padding:0 40rpx 30rpx;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EDEDED;
+    height: 80rpx;
+    line-height: 100rpx;
+}
+.icon-xiangyou{
+    color: #9FA1A4;
+}

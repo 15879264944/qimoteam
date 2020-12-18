@@ -114,11 +114,4 @@
   line-height: 100rpx;
   font-size: 36rpx;
 }
-/*收入类*/
-.icome{
-  color: #D78485
-}
-/*支出类*/
-.pay{
-  color: #339677
-}
+

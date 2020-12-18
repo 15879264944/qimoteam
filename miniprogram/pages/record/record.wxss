@@ -60,6 +60,14 @@
   color: #B3B3B3;
   margin-top: 10rpx;
 }
+/*激活图标样式*/
+.iconItem.active .iconImg{
+  transform: scale(1.2); /*缩放属性*/
+}
+.iconItem.active .iconName{
+  font-weight: bold;
+  color: #000;
+}
 /*账户选择*/
 .accountBox,.infoBox{
   background: rgb(253, 251, 251);

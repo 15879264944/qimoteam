@@ -1,0 +1,42 @@
+<view class="detail">
+    <!-- 金额 -->
+    <view class="moneyBox {{info.costType}}">
+        <input type="text" value="{{info.money}}"/>
+    </view>
+    <!-- 信息列表 -->
+    <view class="infoList">
+        <view class="infoTitle">
+            <text class="iconfont icon-fenlei icon-1"></text>
+            分类
+        </view>
+        <view class="infoVal">{{info.iconTitle}}</view>
+    </view>
+    <view class="infoList">
+        <view class="infoTitle">
+            <text class="iconfont icon-qianbao1 icon-2"></text>
+            账户
+        </view>
+        <view class="infoVal">{{info.accountTitle}}</view>
+    </view>
+    <view class="infoList">
+        <view class="infoTitle">
+            <text class="iconfont icon-rili pay"></text>
+            日期
+        </view>
+        <view class="infoVal">{{info.date}}</view>
+    </view>
+    <view class="infoList">
+        <view class="infoTitle">
+            <text class="iconfont icon-jilu icon-4"></text>
+            备注
+        </view>
+        <view class="infoVal">
+            <input type="text" value="{{info.comment}}"/>
+        </view>
+    </view>
+</view>
+<!-- 编辑删除按钮 -->
+<view class="btnBox">
+    <view class="setBtn">编辑</view>
+    <view class="deleteBtn" bindtap="deleteMsgData">删除</view>
+</view>

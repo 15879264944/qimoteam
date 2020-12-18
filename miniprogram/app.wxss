@@ -1,2 +1,23 @@
 /*全局引入字体样式*/
-@import "./style/iconfont.wxss"
+@import "./style/iconfont.wxss";
+
+.icon-1{
+    color: #FC678E;
+}
+.icon-2{
+    color: #6CABFD;
+}
+.icon-3{
+    color: #FD7361;
+}
+.icon-4{
+    color: #FFBE00;
+}
+/*收入类*/
+.income{
+    color: #D78485
+  }
+  /*支出类*/
+  .pay{
+    color: #339677
+  }

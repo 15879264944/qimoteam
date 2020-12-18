@@ -1,0 +1,54 @@
+/* miniprogram/pages/detail/detail.wxss */
+.detail{
+    padding: 0 30rpx;
+}
+.moneyBox{
+    padding: 30rpx 0;
+}
+.moneyBox input{
+    font-size: 100rpx;
+    font-weight: bold;
+    height: 120rpx;
+    line-height: 120rpx;
+}
+.infoList{
+    border-top: 1px solid #EDEDED;
+    display: flex;
+    padding: 30rpx 0;
+}
+.infoList .infoTitle{
+    color: #969696;
+    width: 150rpx;
+}
+.infoList .infoVal{
+    width: calc(100%-140rpx);
+}
+.infoList .infoVal input{
+    width: 100%;
+}
+/* 编辑删除按钮 */
+.btnBox{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.setBtn{
+    width: 50%;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    background-color: #FFDC5A;
+    color: #fff;
+}
+.deleteBtn{
+    width: 30%;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    border: 1px solid #969696;
+    color: #e43937;
+}
+
